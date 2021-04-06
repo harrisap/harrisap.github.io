@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+
+    --light-color: #f2f2f2;
+    --body-color: #404040;
+    --heading-color: #9c3d10;
+    --contrast-color: #40dfdf;
+}
+
+a {
+    color: var(--body-color);
+    text-decoration-color: var(--contrast-color);
+}
+
+a:hover {
+    color: var(--contrast-color);
+    /* text-decoration-color: var(--heading-color); */
+}
+
+body {
+    padding-left: 4em;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    background-image: repeating-linear-gradient(135deg, rgba(189, 189, 189, 0.1) 0px, rgba(189, 189, 189, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+    color: var(--body-color);
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    font-family: 'Playfair Display', serif;
+    color: var(--heading-color);
+}
+
+body#about img {}
+
+body#portfolio img {}
+
+p {
+    max-width: 40em;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "head head" "nav nav" "main main" "foot foot";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+@media screen and (min-width: 25em) {
+    body {
+        grid-template-areas: "head head" "nav main" "foot foot";
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+body>* {
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+}
+
+body>header {
+    grid-area: head;
+}
+
+body>nav {
+    grid-area: nav;
+}
+
+body>nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body>main {
+    grid-area: main;
+}
+
+body>footer {
+    grid-area: foot;
+}
+
+header, footer {
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+}
+
+header h1, footer h1 {
+    margin: 0;
+}
+
+body#portfolio ul#portfolioItems {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 25em) {
+    body#portfolio ul#portfolioItems li {
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
+}
+
+body#portfolio ul#portfolioItems li img {
+    max-width: 100%;
+}
