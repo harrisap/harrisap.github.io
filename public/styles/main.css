@@ -114,6 +114,7 @@ body#portfolio ul#portfolioItems li img {
 }
 
 #navbar {
+    padding-left: 0px;
     overflow: hidden;
     background-color: #333;
 }
