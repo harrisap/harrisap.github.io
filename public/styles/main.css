@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
 :root {
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
-
     --light-color: #f2f2f2;
     --body-color: #404040;
     --heading-color: #9c3d10;
@@ -22,7 +20,7 @@ a:hover {
 }
 
 body {
-    padding-left: 4em;
+    /* padding-left: 4em; */
     font-size: 18px;
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;
@@ -53,7 +51,7 @@ body {
 
 @media screen and (min-width: 25em) {
     body {
-        grid-template-areas: "head head" "nav main" "foot foot";
+        grid-template-areas: "head head" "nav nav" "main main" "foot foot";
         grid-template-rows: auto 1fr auto;
     }
 }
@@ -71,9 +69,12 @@ body>nav {
     grid-area: nav;
 }
 
-body>nav ul {
-    list-style-type: none;
-    padding: 0;
+body>nav ul li {
+    /* list-style-type: none;
+    padding: 0; */
+    display: inline-block;
+    padding-right: 20px;
+    margin-top: 1em;
 }
 
 body>main {
@@ -110,4 +111,36 @@ body#portfolio ul#portfolioItems {
 
 body#portfolio ul#portfolioItems li img {
     max-width: 100%;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration-color: var(--contrast-color);
+}
+
+#navbar a:hover {
+    color: var(--contrast-color);
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
 }
