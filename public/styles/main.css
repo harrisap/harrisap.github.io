@@ -34,9 +34,13 @@ h1, h2, h3 {
     color: var(--heading-color);
 }
 
-body#about img {}
+body#about img {
+    border: 3px solid rgb(30, 27, 31);
+}
 
-body#portfolio img {}
+body#portfolio img {
+    border: 3px solid rgb(30, 27, 31);
+}
 
 p {
     max-width: 40em;
@@ -124,7 +128,7 @@ body#portfolio ul#portfolioItems li img {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px;
+    padding: 12px;
     text-decoration-color: var(--contrast-color);
 }
 
