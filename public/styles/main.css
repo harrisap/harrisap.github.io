@@ -42,7 +42,15 @@ body#portfolio img {
     border: 3px solid rgb(30, 27, 31);
 }
 
-p {
+body#about p {
+    max-width: 27em;
+}
+
+body#portfolio p {
+    max-width: 40em;
+}
+
+body#resume p {
     max-width: 40em;
 }
 
